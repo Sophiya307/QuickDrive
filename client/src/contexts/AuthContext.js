@@ -9,6 +9,7 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
+  const [currentUsername, setCurrentUsername] = useState();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -18,10 +19,14 @@ export function AuthProvider({ children }) {
       })
       .then((res) => {
         setCurrentUser(res.data.id);
+        console.log(res.data.id)
+        setCurrentUsername(res.data.username);
+        console.log(res.data)
         setLoading(false);
       })
       .catch(() => {
         setCurrentUser(null);
+        setCurrentUsername(null);
         setLoading(false);
       });
   }, []);
@@ -29,6 +34,8 @@ export function AuthProvider({ children }) {
   const value = {
     currentUser,
     setCurrentUser,
+    currentUsername,
+    setCurrentUsername,
   };
 
   return (

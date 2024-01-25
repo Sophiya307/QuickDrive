@@ -8,7 +8,7 @@ import "./Selects.css";
 const customStyles = {
   container: (provided) => ({
     ...provided,
-    border: "3px solid #FE8F8F",
+    border: "3px solid #4c4440",
     borderRadius: "5px",
   }),
   control: () => ({
@@ -45,7 +45,7 @@ function Selects() {
 
   return (
     <div className="selectContainer">
-      <Select
+      <Select 
         onChange={setRole}
         className="role"
         styles={customStyles}
@@ -61,16 +61,17 @@ function Selects() {
         styles={customStyles}
         options={[
           { value: "", label: "None" },
-          { value: "Churchgate", label: "Churchgate" },
-          { value: "Thane", label: "Thane" },
-          { value: "Navi Mumbai", label: "Navi Mumbai" },
-          { value: "Bandra", label: "Bandra" },
-          { value: "Vasai", label: "Vasai" },
-          { value: "Powai", label: "Powai" },
-          { value: "Ghatkopar", label: "Ghatkopar" },
-          { value: "Fort", label: "Fort" },
-          { value: "Borivali", label: "Borivali" },
-          { value: "Marine Lines", label: "Marine Lines" },
+          { value: "Indore", label: "Indore" },
+          { value: "Ujjain", label: "Ujjain" },
+          { value: "Bhopal", label: "Bhopal" },
+          { value: "Dewas", label: "Dewas" },
+          { value: "Ratlam", label: "Ratlam" },
+          { value: "Sehore", label: "Sehore" },
+          { value: "Nagda", label: "Nagda" },
+          { value: "Jabalpur", label: "Jabalpur" },
+          { value: "Gwalior", label: "Gwalior" },
+          { value: "Morena", label: "Morena" },
+          { value: "Rewa", label: "Rewa" }
         ]}
       />
       <Select
@@ -79,24 +80,25 @@ function Selects() {
         styles={customStyles}
         options={[
           { value: "", label: "None" },
-          { value: "Churchgate", label: "Churchgate" },
-          { value: "Thane", label: "Thane" },
-          { value: "Navi Mumbai", label: "Navi Mumbai" },
-          { value: "Bandra", label: "Bandra" },
-          { value: "Vasai", label: "Vasai" },
-          { value: "Powai", label: "Powai" },
-          { value: "Ghatkopar", label: "Ghatkopar" },
-          { value: "Fort", label: "Fort" },
-          { value: "Borivali", label: "Borivali" },
-          { value: "Marine Lines", label: "Marine Lines" },
+          { value: "Indore", label: "Indore" },
+          { value: "Ujjain", label: "Ujjain" },
+          { value: "Bhopal", label: "Bhopal" },
+          { value: "Dewas", label: "Dewas" },
+          { value: "Ratlam", label: "Ratlam" },
+          { value: "Sehore", label: "Sehore" },
+          { value: "Nagda", label: "Nagda" },
+          { value: "Jabalpur", label: "Jabalpur" },
+          { value: "Gwalior", label: "Gwalior" },
+          { value: "Morena", label: "Morena" },
+          { value: "Rewa", label: "Rewa" },
         ]}
       />
       {role.value === "driver" ? (
         <CreateForm pickup={pickup.value} dropoff={dropoff.value} />
       ) : (
         <div>
-          <button className="searchBtn" onClick={handleSearch}>
-            SEARCH<span class="material-icons-outlined">search</span>
+          <button className="searchBtn ms-2" onClick={handleSearch}>
+            SEARCH  <span class="material-icons-outlined">search</span>
           </button>
         </div>
       )}

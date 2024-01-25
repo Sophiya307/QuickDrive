@@ -11,6 +11,7 @@
   align-items: center;
   padding: 1em;
   background-color: var(--special);
+  border-radius: 0.5rem;
 }
 
 .profileSubheader {
@@ -72,7 +73,7 @@
 }
 
 .myPassengerContainer>button:hover {
-  background-color: pink;
+  background-color: #4c4440;
 }
 
 .myRide {
@@ -84,4 +85,23 @@
 .placeholderContent {
   padding: 1em;
   color: grey;
+}
+.a-home{
+  text-decoration: none;
+  color: white;
+}
+.searchBtn-1{
+  /* display: flex; */
+  align-items: center;
+  border: none;
+  background-color: #4c4440;
+  border-radius: 5px;
+  height: 30%;
+  font-size: 1.2rem;
+  padding: 1em;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  
 }

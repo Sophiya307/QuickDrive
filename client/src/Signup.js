@@ -21,14 +21,20 @@ function Signup() {
       });
       history.replace("/");
     } catch (err) {
-      setError(err.response.data);
+      console.error("Error object:", err);
+      if (err.response && err.response.data) {
+        setError(err.response.data);
+      } else {
+        // If 'err.response' is undefined or 'err.response.data' is undefined
+        setError("An unexpected error occurred.");
+      }
     }
   }
   return (
     <div className="login">
       <div className="card1">
-        <h1>RideALONG</h1>
-        <h2 className="text-muted">Mern MiniProject</h2>
+        <h1>QuickDrive</h1>
+        {/* <h2 className="text-muted">Major Project</h2> */}
       </div>
       <div className="card2">
         <h1>Sign Up</h1>
@@ -52,7 +58,7 @@ function Signup() {
           </div>
         </form>
         <p>
-          Already have an account? <Link to="/">Login.</Link>
+          Already have an account? <Link to="/login">Login.</Link>
         </p>
       </div>
     </div>

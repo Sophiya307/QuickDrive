@@ -9,6 +9,7 @@ function Login() {
   const passwordRef = useRef();
   const history = useHistory();
   const { setCurrentUser } = useAuth();
+  const { setCurrentUsername } = useAuth();
   const [error, setError] = useState("");
 
   async function handleSubmit(e) {
@@ -21,6 +22,7 @@ function Login() {
       });
       localStorage.setItem("token", "Bearer " + res.data.accessToken);
       setCurrentUser(res.data.userId);
+      console.log(res.data);
       history.push("/home");
     } catch (err) {
       setError("Failed to login");
@@ -30,8 +32,8 @@ function Login() {
   return (
     <div className="login">
       <div className="card1">
-        <h1>RideALONG</h1>
-        <h2 className="text-muted">Mern MiniProject</h2>
+        <h1>QuickDrive</h1>
+        {/* <h2 className="text-muted">Major Project</h2> */}
       </div>
       <div className="card2">
         <h1>Login</h1>

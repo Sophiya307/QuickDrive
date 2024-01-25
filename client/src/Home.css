@@ -10,6 +10,7 @@
 
 .home>h1 {
   margin-top: 1em;
+  
 }
 
 .homeHeader {
@@ -17,11 +18,18 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--special);
+  background-color: #4c4440;
   padding: 1em;
+  color: #eee1d5;
 }
 
 .homeHeader li {
   list-style: none;
   cursor: pointer;
+  color: #eee1d5;
+  text-decoration: none;
+}
+.h3-home{
+  text-decoration: underline;
+  
 }

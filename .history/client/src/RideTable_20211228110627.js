@@ -89,7 +89,7 @@ function RideTable({ rows }) {
           <div style={{ display: "flex" }}>{info.time}</div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span>Price: ${info.price}</span>
-            <span>Seats left: {info.seats}</span>
+            <span>Seats left: {info.hobby}</span>
           </div>
         </DialogContent>
         <DialogActions>

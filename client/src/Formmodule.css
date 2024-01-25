@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+
+
+.input_group{
+    @apply flex border rounded-xl ;
+    position: relative;
+}
+.input_text{
+    @apply w-full py-4 px-3 border rounded-xl bg-slate-50;
+    @apply focus:outline-none border-none;
+}
+.button{
+    @apply w-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-md;
+    @apply py-3 text-gray-50 text-lg;
+}
+.button:hover{
+    @apply bg-gradient-to-r from-gray-50 to-gray-100 border-blue-500;
+    @apply text-gray-700 border;
+}
+.button_custom{
+    @apply w-full border py-3 flex justify-center gap-2 hover:bg-gray-200 mt-4;
+ }
+/* .form_radius {
+    border-radius: 6rem 2rem;
+  }
+.rounded_button {
+    border-radius: 20px;
+  }
+.text_justify {
+    text-align: justify;
+  }
+.bg_custom {
+    background: linear-gradient(to bottom, #63b6c799, #909dbc8a);
+  }
+.custom_rounded {
+    border-radius: 50px;
+  }
+.form_back {
+    background-color: #dfe5fe;
+  }  */
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+*>*{
+  font-family: 'Poppins', sans-serif;
+}
+/* a {
+  color:inherit;
+ text-decoration: none;
+} */
+*{
+  box-sizing: border-box;
+}
+.form_radius {
+  border-radius: 6rem 2rem;
+}
+.rounded_button {
+  border-radius: 20px;
+}
+.text_justify {
+  text-align: justify;
+}
+.bg_custom {
+  background: #eee1d5;
+}
+.custom_rounded {
+  border-radius: 50px;
+}
+.form_back {
+  background-color: #dfe5fe;
+} 
+.card_1{
+  background-color: #4c4440;
+  border-radius: 3rem;
+  height: 550px;
+  margin: 10px 0px;
+}
+.nav_link.active {
+  color: black;
+}
+.nav_link {
+  color: #4c4440 !important;
+  text-decoration: none !important;
+  text-decoration-line: none;
+  margin: 0;
+  
+}
+/* #navbarNav{
+  color: black;
+} */
+
+.card1btn{
+  background-color: #eee1d5;
+  border-radius: 0.5rem;
+  width: 8rem;
+  height: 3rem;
+  margin: 1.5rem;
+  border-style: none;
+  cursor: default;
+}
+.form{
+  background-color: #A4D8FF;
+}
+.nav_bg{
+  background-color: #eee1d5;
+}
+.fontbold{
+  font-family: 'Poppins-Bold';
+  color: #4c4440;
+}
+.btn-1{
+  background-color: #4c4440;
+  text-decoration: none !important;
+  text-shadow: none;
+  color: white;
+  width: 9rem;
+  font-size: 1.2rem;
+  padding: 13px 0;
+  border-style: none;
+  cursor: pointer;
+}
+.p-class{
+  color: white;
+}
+.p-home{
+  font-size: 23px;
+}
+.form-footer{
+  margin: 0 0 2rem 0;
+  padding: 1rem;
+  border-style: none;
+  width: 80%;
+  border-radius: 0.5rem;
+}
+
+/* .form-footer_1{
+  margin: 1rem;
+  padding-top: 0;
+  padding: 1rem;
+  border-style: none;
+  height: 15rem;
+  width: 22rem;
+  border-radius: 0.5rem;
+
+} */ 
+.icons-1{
+  color: black;
+  
+}

@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import { AppProvider } from "./contexts/AppContext";
 import Profile from "./Profile";
 import Logout from "./Logout";
+import { HomePage } from "./HomePage";
 
 const THEME = createMuiTheme({
   typography: {
@@ -30,7 +31,7 @@ function App() {
         <ThemeProvider theme={THEME}>
           <AuthProvider>
             <Switch>
-              <Route exact path="/" component={Login} />
+              <Route exact path="/" component={HomePage} />
               <Route path="/login" component={Login} />
               <Route path="/signup" component={Signup} />
               <Route path="/logout" component={Logout} /> 

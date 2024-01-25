@@ -19,6 +19,7 @@ import ClearIcon from "@material-ui/icons/Clear";
 import Tooltip from "@material-ui/core/Tooltip";
 import DriveEtaIcon from "@material-ui/icons/DriveEta";
 
+
 function Profile() {
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState({});
@@ -35,7 +36,7 @@ function Profile() {
 
   const handleClose = () => {
     setOpen(false);
-  };
+  }; 
 
   function ProfilePopup({ info }) {
     async function handleAccept(id) {
@@ -242,6 +243,7 @@ function Profile() {
           headers: { authorization: localStorage.getItem("token") },
         });
         setPhoto(`image/${res.data.profileImageName}`);
+        
       } catch (err) {
         console.error(err);
       }
@@ -268,12 +270,12 @@ function Profile() {
       </Snackbar>
       <ProfilePopup info={info} />
       <div className="profileHeader">
-        <a href="/home"><h3>RideALONG</h3></a>
-        <h1>My Rides</h1>
+        <a href="/home" className="a-home"><h3>QuickDrive</h3></a>
+        <h1 className="text-white">My Rides</h1>
         {/* <Tooltip title="Change profile picture" placement="bottom">
           <Avatar onClick={handleEditPicture} src={`/${photo}`} alt="" />
         </Tooltip> */}
-        <a href="/logout"><button className="searchBtn">Logout</button></a>
+        <a href="/logout"><button className="searchBtn-1">Logout</button></a>
         <form encType="multipart/form-data" style={{ display: "none" }}>
           <input
             type="file"

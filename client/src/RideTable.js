@@ -88,8 +88,8 @@ function RideTable({ rows }) {
           <div>{`${info.pickup} to ${info.dropoff}`}</div>
           <div style={{ display: "flex" }}>{info.time}</div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <span>Price: ${info.price}</span>
-            <span>Seats left: {info.seats}</span>
+            <span>Price: ₹ {info.price}</span>
+            <span>Seats left: {info.hobby}</span>
           </div>
         </DialogContent>
         <DialogActions>
@@ -128,11 +128,11 @@ function RideTable({ rows }) {
         <TableBody style={{ cursor: "pointer" }}>
           {rows.map((row) => (
             <TableRow
-              key={row._id}
+              key={row?._id}
               onClick={() =>
                 handleClickOpen(
                   row._id,
-                  row.ownerId.username,
+                  row?.ownerId?.username,
                   row.pickup,
                   row.dropoff,
                   row.pickupTime,
@@ -145,8 +145,8 @@ function RideTable({ rows }) {
             >
               <TableCell component="th" scope="row">
                 <Avatar
-                  alt={row.ownerId.username}
-                  src={`/image/${row.ownerId.profileImageName}`}
+                  alt={row?.ownerId?.username}
+                  src={`/image/${row?.ownerId?.profileImageName}`}
                 />
               </TableCell>
               <TableCell>{row.pickup}</TableCell>
@@ -160,15 +160,15 @@ function RideTable({ rows }) {
                   minute: "2-digit",
                 })}
               </TableCell>
-              <TableCell>${row.price}</TableCell>
-              <TableCell>{row.ownerId.hobby}</TableCell>
+              <TableCell>₹ {row.price}</TableCell>
+              <TableCell>{row?.ownerId?.hobby}</TableCell>
               <TableCell>
                 <div style={{ display: "flex" }}>
                   {row.riders.map((rider) => (
                     <Avatar
-                      alt={rider.username}
-                      key={rider._id}
-                      src={`/image/${rider.profileImageName}`}
+                      alt={rider?.username}
+                      key={rider?._id}
+                      src={`/image/${rider?.profileImageName}`}
                     />
                   ))}
                 </div>

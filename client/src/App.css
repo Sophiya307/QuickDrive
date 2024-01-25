@@ -4,13 +4,13 @@
 }
 
 :root {
-  --special: #FE8F8F;
-  --bg: #ffe2e1;
+  --special: #4c4440;
+  --bg: #4c4440;
 }
 
 .app {
   height: 100vh;
-  background-color: var(--bg);
+  background-color: #eee1d5;
 }
 
 a {
